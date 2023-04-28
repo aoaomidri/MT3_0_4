@@ -14,18 +14,26 @@ public:
 
 
 private:
+	Vector3 scale;
+
 	Vector3 rotate;
+
+	Vector3 translate;
 
 	Matrix4x4 ScaleMatrix;	
 
 	Matrix4x4 TranslateMatrix;
 
-public:
-
 	Matrix4x4 RotateMatrixXYZ;
 	Matrix4x4 RotateMatrixX;
 	Matrix4x4 RotateMatrixY;
 	Matrix4x4 RotateMatrixZ;
+
+public:
+
+	Matrix4x4 worldMatrix;
+
+	
 
 public:
 	void Update();

@@ -29,8 +29,6 @@ void SCPrintf::VectorScreenPrintf(int x, int y, const Vector3& vec, const char* 
 
 void SCPrintf::Update() {
 	matrix->Update();
-	MatrixScreenPrintf(0, 0, matrix->RotateMatrixX, "rotateMatrixX");
-	MatrixScreenPrintf(0, kRowHeight * 5, matrix->RotateMatrixY, "rotateMatrixY");
-	MatrixScreenPrintf(0, kRowHeight * 10, matrix->RotateMatrixZ, "rotateMatrixZ");
-	MatrixScreenPrintf(0, kRowHeight * 15, matrix->RotateMatrixXYZ, "rotateMatrixXYZ");
+	MatrixScreenPrintf(0, 0, matrix->worldMatrix, "worldMatrix");
+	
 }

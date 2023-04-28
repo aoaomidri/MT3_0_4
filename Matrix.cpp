@@ -10,15 +10,16 @@ Matrix::Matrix(){
 			RotateMatrixZ.m[i][j] = 0.0f;
 		}
 	}
+	scale = { 1.2f,0.79f,-2.1f };
+
 	rotate = { 0.4f,1.43f,-0.8f };
+
+	translate = { 2.7f,-4.15f,1.57f };
 
 };
 
 void Matrix::Update() {
-	RotateMatrixX = MakeRotateMatrixX(rotate);
-	RotateMatrixY = MakeRotateMatrixY(rotate);
-	RotateMatrixZ = MakeRotateMatrixZ(rotate);
-	RotateMatrixXYZ = Multiply(RotateMatrixX, Multiply(RotateMatrixY, RotateMatrixZ));
+	worldMatrix = MakeAffineMatrix(scale, rotate, translate);
 }
 
 
